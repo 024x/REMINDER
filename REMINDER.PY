@@ -118,4 +118,5 @@ def def_home():
 
 scheduler.start()
 
-app.run(port=os.getenv("PORT", default=5000))
+if __name__ == '__main__':
+    app.run(port=os.getenv("PORT", default=5000))
