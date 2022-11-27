@@ -1,1 +1,1 @@
-web: gunicorn REMINDER:app
+web: gunicorn main:app
