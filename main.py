@@ -11,6 +11,10 @@ import requests
 logging.basicConfig(level=logging.INFO)
 data = {
     "maonday": {
+        "test": {
+            "title": "Test Header",
+            "message": "Test MEssage"
+        },
 
         "07:45": {
             "title": "A1 - SST at IIItKota lab\nA2 - 408",
@@ -74,6 +78,11 @@ def sendalert(text, title):
     session.quit()
 
 
+scheduler.add_job(sendalert, 'cron', hour=23, minute=10, day_of_week="sun",
+                  args=[data["maonday"]["test"]["message"],
+                        data["maonday"]["test"]["title"]],
+
+                  )
 scheduler.add_job(sendalert, 'cron', hour=7, minute=45, day_of_week="mon",
                   args=[data["maonday"]["07:45"]["message"],
                         data["maonday"]["07:45"]["title"]],
