@@ -187,7 +187,7 @@ scheduler.add_job(sendalert, 'cron', day_of_week='tue', hour=(8 - 1), minute=00,
 
 for i in data["tue"]:
     scheduler.add_job(sendalert, 'cron', day_of_week='tue', hour=(i["hour"] - 1), minute=45, args=[
-                      forma(title="{i['Group']} - {i['Room']}", grp=i["Group"], sub=i["Subject"], teac=i["Teacher"], room=i["Room"],), f"{i['Group']} - {i['Room']}", tele(title="{i['Group']} - {i['Room']}", grp=i["Group"], sub=i["Subject"], teac=i["Teacher"], room=i["Room"])])
+                      forma(title=f"{i['Group']} - {i['Room']}", grp=i["Group"], sub=i["Subject"], teac=i["Teacher"], room=i["Room"],), f"{i['Group']} - {i['Room']}", tele(title="{i['Group']} - {i['Room']}", grp=i["Group"], sub=i["Subject"], teac=i["Teacher"], room=i["Room"])])
     print(f"{i['hour']} , {i['Subject']}")
 
 scheduler.start()
