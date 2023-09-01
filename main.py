@@ -179,7 +179,7 @@ bot = Client(
     "my_account",
     api_id=2171111,
     api_hash="fd7acd07303760c52dcc0ed8b2f73086",
-    bot_token="5416961842:AAGrCJZ-Xvmd6BxdojfRVDKhfg086FQ8h2Y",
+    bot_token="",
 )
 
 scheduler.add_job(sendalert, 'cron', day_of_week='tue', hour=(8 - 1), minute=00, args=[
