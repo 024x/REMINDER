@@ -159,7 +159,7 @@ def sendalert(text, title, tg):
         f"https://api.telegram.org/bot5416961842:AAGrCJZ-Xvmd6BxdojfRVDKhfg086FQ8h2Y/sendMessage?chat_id=-1001810029471&text={tg}&parse_mode=html"
     )
     sender_address = 'torrleechs@gmail.com'
-    sender_pass = 'aztdvpeskpaclseo'
+    sender_pass = ''
     receiver_address = "kotaiiit@googlegroups.com"
     message = MIMEMultipart()
     message['Subject'] = title
